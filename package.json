@@ -21,8 +21,9 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "prepack": "npm run build",
+    "publish-public": "npm publish --access=public",
     "build:docs": "npm run --prefix ./docs build",
-    "publish:docs": "npm run --prefix ./docs publish"
+    "deploy:docs": "npm run --prefix ./docs deploy"
   },
   "dependencies": {
     "@ungap/event-target": "^0.2.2",
