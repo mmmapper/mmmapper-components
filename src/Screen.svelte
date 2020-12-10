@@ -8,7 +8,8 @@
   /* Args */
   export let width, height;
   export let editMode = false;
-  let className, style;
+  export let style;
+  let className;
   export { className as class };
 
   /* Params */
