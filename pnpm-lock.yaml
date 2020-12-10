@@ -8,7 +8,6 @@ devDependencies:
   '@rollup/plugin-commonjs': 17.0.0_rollup@2.34.2
   '@rollup/plugin-inject': 4.0.2_rollup@2.34.2
   '@rollup/plugin-node-resolve': 11.0.0_rollup@2.34.2
-  core-js: 3.8.1
   rollup: 2.34.2
   rollup-plugin-livereload: 2.0.0
   rollup-plugin-node-polyfills: 0.2.1
@@ -1449,11 +1448,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-a16TLmy9NVD1rkjUGbwuyWkiDoN0FDpAwrfLONvHFQx0D9k7J9y0srwMT8QP/Z6HE3MIFaVynEeYwZwPX1o5RQ==
-  /core-js/3.8.1:
-    dev: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-9Id2xHY1W7m8hCl8NkhQn5CufmF/WuR30BTRewvCXc1aZd3kMECwNZ69ndLbekKfakw9Rf2Xyc+QR6E7Gg+obg==
   /debug/4.3.1:
     dependencies:
       ms: 2.1.2
@@ -2240,7 +2234,6 @@ specifiers:
   '@rollup/plugin-inject': ^4.0.2
   '@rollup/plugin-node-resolve': ^11.0.0
   '@ungap/event-target': ^0.2.2
-  core-js: '3'
   pixi-projection: ^0.3.15
   pixi.js: ^5.3.3
   rollup: ^2.34.2
