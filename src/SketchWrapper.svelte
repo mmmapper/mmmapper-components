@@ -1,6 +1,6 @@
 <script>
   import { onMount, getContext } from 'svelte';
-  import PIXI, { PIXI_CONTEXT } from './lib/pixi';
+  import PIXI, { PIXI_CONTEXT } from './lib/pixi/index.js';
 
   const { getApp, pixiStore } = getContext(PIXI_CONTEXT);
   const app = getApp();

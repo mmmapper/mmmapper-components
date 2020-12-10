@@ -2,7 +2,7 @@
   import { onMount, setContext } from 'svelte';
   import { writable } from 'svelte/store';
 
-  import PIXI, { PIXI_CONTEXT } from './lib/pixi';
+  import PIXI, { PIXI_CONTEXT } from './lib/pixi/index.js';
   import 'pixi-projection';
 
   /* Args */

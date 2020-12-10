@@ -1,7 +1,7 @@
 <script>
   import { getContext, onMount } from 'svelte';
 
-  import PIXI, { PIXI_CONTEXT, DragManager, WarpContainer } from '../lib/pixi';
+  import PIXI, { PIXI_CONTEXT, DragManager, WarpContainer } from '../lib/pixi/index.js';
 
   /* Args */
   export let x = 0,
