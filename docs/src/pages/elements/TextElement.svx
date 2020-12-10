@@ -51,7 +51,7 @@ A text element.
 ```
 <script>
   import { Screen, SketchWrapper } from '@mmmapper/components';
-  import { TextElement } from '@mmmapper/components/elements';
+  import { TextElement } from '@mmmapper/components';
 
   let texts = [
     {
