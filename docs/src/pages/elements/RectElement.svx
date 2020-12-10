@@ -1,6 +1,6 @@
 <script>
   import { Screen, SketchWrapper } from '@mmmapper/components';
-  import { RectElement } from '@mmmapper/components/elements';
+  import { RectElement } from '@mmmapper/components';
 </script>
 
 # RectElement

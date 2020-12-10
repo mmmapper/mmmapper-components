@@ -12,9 +12,17 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
     "src",
     "dist",
+    "vendor",
     "elements.js"
   ],
   "scripts": {

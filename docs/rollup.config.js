@@ -5,7 +5,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
+// import nodePolyfills from 'rollup-plugin-node-polyfills';
 import { mdsvex } from 'mdsvex';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -71,10 +71,10 @@ export default {
     // a separate file - better for performance
     css({ output: 'bundle.css' }),
 
-    nodePolyfills({
-      include: ['node_modules/pixi.js/**'],
-      url: true,
-    }),
+    // nodePolyfills({
+    //   include: ['node_modules/pixi.js/**'],
+    //   url: true,
+    // }),
 
     // If you have external dependencies installed from
     // npm, you'll most likely need these plug ins. In
@@ -83,7 +83,7 @@ export default {
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
       browser: true,
-      preferBuiltins: true,
+      // preferBuiltins: true,
       dedupe: ['svelte'],
     }),
 

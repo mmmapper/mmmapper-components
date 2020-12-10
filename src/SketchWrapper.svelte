@@ -5,6 +5,8 @@
   const { getApp, pixiStore } = getContext(PIXI_CONTEXT);
   const app = getApp();
 
+  console.log('SketchWrapper loaded');
+
   onMount(() => {
     console.log('SketchWrapper mounted');
 

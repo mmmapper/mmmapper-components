@@ -1,4 +1,4 @@
-import * as _PIXI from 'pixi.js';
+import { PIXI as _PIXI } from '../../../vendor/pixi.js';
 let PIXI = (window.PIXI = Object.assign({}, _PIXI)); // https://github.com/pixijs/pixi-projection/issues/66
 
 import EventTarget from '@ungap/event-target'; // For Safari <14 (+ Mobile Safari?)

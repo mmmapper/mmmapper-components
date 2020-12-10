@@ -8,12 +8,12 @@
   /* Args */
   export let width, height;
   export let editMode = false;
-  let className;
+  let className, style;
   export { className as class };
 
   /* Params */
   let app = null;
-  let appInitialized = false;
+  let initialized = false;
 
   /* DOM elements */
   let canvas;
@@ -57,13 +57,14 @@
     app.ticker = null; // NOTE: Init in components/SketchWrapper.svelte
     app.stage = null; // NOTE: Init in components/SketchWrapper.svelte
 
-    appInitialized = true;
+    initialized = true;
 
     return () => {
-      appInitialized = false;
+      initialized = false;
       console.log($destructors);
       $destructors.forEach((destructor) => destructor());
-      if ($sketchWrapperDestructor()) { // Destroy only if SketchWrapper exists
+      if ($sketchWrapperDestructor()) {
+        // Destroy only if SketchWrapper exists
         app.destroy();
       }
       console.log('Screen destroyed');
@@ -71,7 +72,7 @@
   });
 </script>
 
-<canvas bind:this={canvas} {width} {height} class={className} />
-{#if appInitialized}
+<canvas bind:this={canvas} {width} {height} class={className} {style} />
+{#if initialized}
   <slot />
 {/if}
