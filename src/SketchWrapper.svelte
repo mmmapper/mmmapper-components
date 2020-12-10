@@ -1,0 +1,27 @@
+<script>
+  import { onMount, getContext } from 'svelte';
+  import PIXI, { PIXI_CONTEXT } from './lib/pixi';
+
+  const { getApp, pixiStore } = getContext(PIXI_CONTEXT);
+  const app = getApp();
+
+  onMount(() => {
+    console.log('SketchWrapper mounted');
+
+    app.ticker = PIXI.Ticker.shared;
+    app.ticker.autoStart = false;
+    app.stage = new PIXI.Container();
+    app.ticker.start();
+
+    pixiStore.sketchWrapperDestructor.set(() => {
+      app.ticker.stop();
+      app.stage.destroy(); // TODO: Should be app.stage.destroy(true);
+      console.log('SketchWrapper destroyed');
+      return true;
+    });
+  });
+</script>
+
+{#if app.stage}
+  <slot />
+{/if}

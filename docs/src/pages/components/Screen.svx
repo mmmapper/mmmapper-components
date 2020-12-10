@@ -1,0 +1,25 @@
+<script>
+  import { Screen, SketchWrapper } from '@mmmapper/components';
+</script>
+
+# Screen
+
+<Screen
+  class="border shadow mx-auto"
+  editMode={true}
+  width="600"
+  height="400">
+</Screen>
+
+```
+<script>
+  import { Screen, SketchWrapper } from '@mmmapper/components';
+</script>
+
+<Screen
+  class="border shadow mx-auto"
+  editMode={true}
+  width="600"
+  height="400">
+</Screen>
+```
