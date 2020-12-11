@@ -1,6 +1,6 @@
 # @mmmapper/components
 
- A libary of components and elements for [mmmapper](https://github.com/nolze/mmmapper). (WIP)
+ A library of components and elements for [mmmapper](https://github.com/nolze/mmmapper). (WIP)
 
 ## Docs
 
