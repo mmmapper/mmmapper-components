@@ -1,7 +1,7 @@
 {
   "name": "@mmmapper/components",
   "version": "0.1.1-1",
-  "description": "A libary of components and elements for mmmapper",
+  "description": "A component/element libary for mmmapper",
   "keywords": [
     "mmmapper"
   ],
