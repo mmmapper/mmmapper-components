@@ -1,29 +1,37 @@
 <script>
-  import { Screen, SketchWrapper } from '@mmmapper/components';
+  import { Canvas, Screen, SketchWrapper } from '@mmmapper/components';
+
+  let canvas;
 </script>
 
 # SketchWrapper
 
-<Screen
-  class="border shadow mx-auto"
-  editMode={true}
+<Canvas
+  bind:canvas={canvas}
   width="600"
-  height="400">
-  <SketchWrapper>
-  </SketchWrapper>
-</Screen>
+  height="400"
+  class="border shadow mx-auto"
+>
+  <Screen canvas={canvas} width="600" height="400" editMode={true}>
+    <SketchWrapper></SketchWrapper>
+  </Screen>
+</Canvas>
 
 ```
 <script>
-  import { Screen, SketchWrapper } from '@mmmapper/components';
+  import { Canvas, Screen, SketchWrapper } from '@mmmapper/components';
+
+  let canvas;
 </script>
 
-<Screen
-  class="border shadow mx-auto"
-  editMode={true}
+<Canvas
+  bind:canvas={canvas}
   width="600"
-  height="400">
-  <SketchWrapper>
-  </SketchWrapper>
-</Screen>
+  height="400"
+  class="border shadow mx-auto"
+>
+  <Screen canvas={canvas} width="600" height="400" editMode={true}>
+    <SketchWrapper></SketchWrapper>
+  </Screen>
+</Canvas>
 ```

@@ -8,16 +8,11 @@
   /* Args */
   export let width, height;
   export let editMode = false;
-  export let style;
-  let className;
-  export { className as class };
+  export let canvas; // DOM element
 
   /* Params */
   let app = null;
-  let initialized = false;
-
-  /* DOM elements */
-  let canvas;
+  let mounted = false, initialized = false;
 
   export function getCanvasRef() {
     return canvas;
@@ -42,9 +37,7 @@
     pixiStore: pixiStore,
   });
 
-  onMount(() => {
-    console.log('Screen mounted');
-
+  $: if (canvas) {
     app = new PIXI.Application({
       view: canvas,
       width: width,
@@ -57,8 +50,13 @@
     app.ticker.autoStart = false;
     app.ticker = null; // NOTE: Init in components/SketchWrapper.svelte
     app.stage = null; // NOTE: Init in components/SketchWrapper.svelte
+  }
 
-    initialized = true;
+  $: if (mounted && canvas) initialized = true;
+
+  onMount(() => {
+    // console.log('Screen mounted');
+    mounted = true;
 
     return () => {
       initialized = false;
@@ -73,7 +71,6 @@
   });
 </script>
 
-<canvas bind:this={canvas} {width} {height} class={className} {style} />
 {#if initialized}
   <slot />
 {/if}

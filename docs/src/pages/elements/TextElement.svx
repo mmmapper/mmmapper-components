@@ -1,6 +1,8 @@
 <script>
-  import { Screen, SketchWrapper } from '@mmmapper/components';
+  import { Canvas, Screen, SketchWrapper } from '@mmmapper/components';
   import { TextElement } from '@mmmapper/components';
+
+  let canvas;
 
   let texts = [
     {
@@ -31,27 +33,37 @@
 
 A text element.
 
-<Screen class="border shadow mx-auto" editMode={true} width="600" height="400">
-  <SketchWrapper>
-    {#each texts as text}
-      <TextElement
-        text={text.value}
-        style={text.style}
-        x={text.x}
-        y={text.y}
-        width={text.width}
-        height={text.height}
-        fontSize={text.fontSize}
-        fill={text.fill}
-        textStyle={text.textStyle} />
-    {/each}
-  </SketchWrapper>
-</Screen>
+<Canvas
+  bind:canvas={canvas}
+  width="600"
+  height="400"
+  class="border shadow mx-auto"
+>
+  <Screen canvas={canvas} width="600" height="400" editMode={true}>
+    <SketchWrapper>
+      {#each texts as text}
+        <TextElement
+          text={text.value}
+          style={text.style}
+          x={text.x}
+          y={text.y}
+          width={text.width}
+          height={text.height}
+          fontSize={text.fontSize}
+          fill={text.fill}
+          textStyle={text.textStyle} />
+      {/each}
+    </SketchWrapper>
+  </Screen>
+</Canvas>
 
 ```
 <script>
-  import { Screen, SketchWrapper } from '@mmmapper/components';
+<script>
+  import { Canvas, Screen, SketchWrapper } from '@mmmapper/components';
   import { TextElement } from '@mmmapper/components';
+
+  let canvas;
 
   let texts = [
     {
@@ -78,20 +90,27 @@ A text element.
   ];
 </script>
 
-<Screen class="border mx-auto" editMode={true} width="600" height="400">
-  <SketchWrapper>
-    {#each texts as text}
-      <TextElement
-        text={text.value}
-        style={text.style}
-        x={text.x}
-        y={text.y}
-        width={text.width}
-        height={text.height}
-        fontSize={text.fontSize}
-        fill={text.fill}
-        textStyle={text.textStyle} />
-    {/each}
-  </SketchWrapper>
-</Screen>
+<Canvas
+  bind:canvas={canvas}
+  width="600"
+  height="400"
+  class="border shadow mx-auto"
+>
+  <Screen canvas={canvas} width="600" height="400" editMode={true}>
+    <SketchWrapper>
+      {#each texts as text}
+        <TextElement
+          text={text.value}
+          style={text.style}
+          x={text.x}
+          y={text.y}
+          width={text.width}
+          height={text.height}
+          fontSize={text.fontSize}
+          fill={text.fill}
+          textStyle={text.textStyle} />
+      {/each}
+    </SketchWrapper>
+  </Screen>
+</Canvas>
 ```
