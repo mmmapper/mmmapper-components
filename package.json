@@ -30,7 +30,7 @@
     "dev": "rollup -c -w",
     "prepack": "npm run build",
     "publish-public": "npm publish --access=public",
-    "build:docs": "npm run --prefix ./docs build",
+    "build:docs": "npm run build && npm run --prefix ./docs build",
     "deploy:docs": "npm run --prefix ./docs deploy"
   },
   "dependencies": {
